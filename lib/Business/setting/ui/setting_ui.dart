@@ -80,8 +80,8 @@ class SettingUi extends StatelessWidget {
                     onTap: () {
                       //context.read<UIControllers>().themeValue();
                     },
-                    leading: Icon(MdiIcons.dog),
-                    title: const Text('Animale Adopted')),
+                    leading: Icon(MdiIcons.accountEdit),
+                    title: const Text('Edit profile')),
               )
             ]),
           ],

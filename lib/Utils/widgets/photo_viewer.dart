@@ -43,7 +43,7 @@ class _PhotoViewerState extends State<PhotoViewer> {
       child: Stack(
         children: [
           PhotoView(
-            imageProvider: AssetImage(widget.url),
+            imageProvider: NetworkImage(widget.url),
             backgroundDecoration: BoxDecoration(
               color: themeData.colorScheme.onBackground.withOpacity(0.8),
             ),

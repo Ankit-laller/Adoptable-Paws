@@ -1,6 +1,7 @@
+import 'package:adoptable_paws/data/cubit/product-cubit/product-cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'Theme/controller/theme_provider.dart';
 import 'Theme/theme.dart';
 import 'navigation/navigation_route.dart';
@@ -24,9 +25,11 @@ class _PetAdoptionBaseState extends State<PetAdoptionBase> {
           ChangeNotifierProvider<UIControllers>(
             create: (context) => UIControllers(),
           ),
+          BlocProvider(create:(context)=> ProductCubit())
 
         ],
         child: const MaterialApp(
+          debugShowCheckedModeBanner: false,
           home:  PetAdoption(),
 
         )
@@ -41,6 +44,7 @@ class PetAdoption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       routerConfig: router,
       theme: AppTheme.getThemeFromThemeMode(
         context.watch<UIControllers>().value,

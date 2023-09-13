@@ -1,3 +1,4 @@
+import 'package:adoptable_paws/Business/homepage/homepage.dart';
 import 'package:adoptable_paws/Business/setting/ui/setting_ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 class NavigationBody {
   static List<Widget> pageBody = <Widget>[
-    Center(child: Text("Home")),
+    const HomePage(),
     Center(child: Text("History")),
     const SettingUi(),
   ];
